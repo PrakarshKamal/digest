@@ -123,3 +123,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes gradient-sweep {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+.sweep {
+  background-size: 200% 100%;
+  animation: gradient-sweep 2.5s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sweep { animation: none; }
+}
+
