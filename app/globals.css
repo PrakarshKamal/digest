@@ -138,3 +138,12 @@
   .sweep { animation: none; }
 }
 
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 3s linear infinite;
+}
