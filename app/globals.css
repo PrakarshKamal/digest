@@ -131,7 +131,7 @@
 
 .sweep {
   background-size: 200% 100%;
-  animation: gradient-sweep 2.5s ease-in-out infinite alternate;
+  animation: gradient-sweep 2.2s ease-in-out infinite alternate;
 }
 
 @media (prefers-reduced-motion: reduce) {
