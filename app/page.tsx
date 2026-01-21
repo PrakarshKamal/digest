@@ -2,6 +2,8 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import Hero from "@/components/ui/shared/hero";
 import { HowItWorks } from "@/components/ui/shared/how-it-works";
 import { Features } from "@/components/ui/shared/features";
+import { CTA } from "@/components/ui/shared/cta";
+import { Pricing } from "@/components/ui/shared/pricing";
 
 export default function Home() {
   return (
@@ -14,9 +16,9 @@ export default function Home() {
           <UserButton />
         </div>
       </SignedIn>
-      {/* <Pricing /> */}
+      <Pricing />
       {/* <FAQ /> */}
-      {/* <CTA /> */}
+      <CTA />
     </main>
   );
 }
