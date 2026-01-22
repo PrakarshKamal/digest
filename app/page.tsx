@@ -4,18 +4,20 @@ import { HowItWorks } from "@/components/ui/shared/how-it-works";
 import { Features } from "@/components/ui/shared/features";
 import { CTA } from "@/components/ui/shared/cta";
 import { Pricing } from "@/components/ui/shared/pricing";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <div className="fixed top-5 right-5 z-50 flex items-center gap-3">
+        <ThemeToggle />
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </div>
       <Hero />
       <Features />
       <HowItWorks />
-      <SignedIn>
-        <div className="fixed top-5 right-5">
-          <UserButton />
-        </div>
-      </SignedIn>
       <Pricing />
       {/* <FAQ /> */}
       <CTA />
