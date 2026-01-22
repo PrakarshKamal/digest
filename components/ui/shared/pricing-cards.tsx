@@ -11,25 +11,30 @@ export const PricingCards = ({ compact = false }: PricingCardsProps) => {
       <div className={compact ? "max-w-4xl w-full" : "max-w-5xl w-full"}>
         <PricingTable
           appearance={{
+            variables: {
+              colorForeground: "var(--foreground)",
+              colorBackground: "var(--card)",
+              colorMutedForeground: "var(--muted-foreground)",
+            },
             elements: {
               pricingTableCardHeader: {
-                backgroundColor: "black dark:white",
-                color: "black dark:white",
+                backgroundColor: "var(--card)",
+                color: "var(--foreground)",
               },
               pricingTableCardTitle: {
                 fontSize: compact ? "1.5rem" : "2rem",
                 fontWeight: "bold",
-                color: "black dark:white",
+                color: "var(--foreground)",
               },
               pricingTableCardDescription: {
                 fontSize: compact ? "0.875rem" : "1rem",
-                color: "black dark:white",
+                color: "var(--muted-foreground)",
               },
               pricingTableCardFee: {
-                color: "black dark:white",
+                color: "var(--foreground)",
               },
               pricingTableCardFeePeriod: {
-                color: "black dark:white",
+                color: "var(--muted-foreground)",
               },
             },
           }}
