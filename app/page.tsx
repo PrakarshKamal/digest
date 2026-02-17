@@ -1,8 +1,9 @@
 import { SignedIn, UserButton } from "@clerk/nextjs";
+import { CTA } from "@/components/ui/shared/cta";
+import { FAQ } from "@/components/ui/shared/faq";
+import { Features } from "@/components/ui/shared/features";
 import Hero from "@/components/ui/shared/hero";
 import { HowItWorks } from "@/components/ui/shared/how-it-works";
-import { Features } from "@/components/ui/shared/features";
-import { CTA } from "@/components/ui/shared/cta";
 import { Pricing } from "@/components/ui/shared/pricing";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
@@ -19,7 +20,7 @@ export default function Home() {
       <Features />
       <HowItWorks />
       <Pricing />
-      {/* <FAQ /> */}
+      <FAQ />
       <CTA />
     </main>
   );

@@ -27,7 +27,7 @@ export const CTA = () => {
           </h2>
           <p className="mt-5 text-lg leading-8 text-gray-600 dark:text-gray-400 sm:text-xl">
             Creators use Digest to curate smarter and publish faster. Plans
-            start at $9/month.
+            start at $10/month.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
