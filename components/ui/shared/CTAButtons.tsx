@@ -1,8 +1,8 @@
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
-import { Button } from "@/components/ui/button";
 import { auth } from "@clerk/nextjs/server";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export const CTAButtons = async () => {
   const { has, userId } = await auth();
@@ -13,7 +13,7 @@ export const CTAButtons = async () => {
   return (
     <>
       <SignedOut>
-        <SignInButton forceRedirectUrl="#/pricing" mode="modal">
+        <SignInButton forceRedirectUrl="/dashboard" mode="modal">
           <Button
             size="lg"
             className="w-full sm:w-auto lg:h-12 lg:px-8 lg:text-lg"
@@ -28,7 +28,7 @@ export const CTAButtons = async () => {
           className="w-full sm:w-auto lg:h-12 lg:px-8 lg:text-lg"
           asChild
         >
-          <Link href="#pricing">View Pricing</Link>
+          <Link href="/#pricing">View Pricing</Link>
         </Button>
       </SignedOut>
 
@@ -55,7 +55,7 @@ export const CTAButtons = async () => {
             variant="outline"
             className="w-full sm:w-auto lg:h-12 lg:px-8 lg:text-lg"
           >
-            <Link href="#pricing">Upgrade Plan</Link>
+            <Link href="/#pricing">Upgrade Plan</Link>
           </Button>
         )}
       </SignedIn>
