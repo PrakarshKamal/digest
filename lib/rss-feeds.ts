@@ -1,5 +1,6 @@
 export const FREE_FEED_LIMIT = 3;
 export const PRO_FEED_LIMIT = 10;
+export const RSS_FEED_CACHE_WINDOW_MS = 3 * 60 * 60 * 1000;
 
 export function getFeedLimitForPlan({
   isMax,
@@ -45,4 +46,14 @@ export function normalizeRssFeedUrl(rawUrl: string) {
   parsedUrl.hash = "";
 
   return parsedUrl.toString();
+}
+
+export function isFeedRefreshFresh(lastFetched: Date | null) {
+  if (!lastFetched) {
+    return false;
+  }
+
+  return (
+    Date.now() - new Date(lastFetched).getTime() < RSS_FEED_CACHE_WINDOW_MS
+  );
 }
